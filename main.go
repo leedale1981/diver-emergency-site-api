@@ -5,8 +5,13 @@ import (
 )
 
 func main() {
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+	http.HandleFunc("/sites", func(w http.ResponseWriter, r *http.Request) {
 		w.Write([]byte("Hello Go!"))
 	})
+
+	http.HandleFunc("/users", func(w http.ResponseWriter, r *http.Request) {
+		w.Write([]byte("Hello Go!"))
+	})
+
 	http.ListenAndServe(":8000", nil)
 }
