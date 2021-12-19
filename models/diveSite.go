@@ -1,11 +1,12 @@
 package model
 
 type DiveSite struct {
-	Id           int
-	Name         string
-	AddressLine1 string
-	AddressLine2 string
-	PostCode     string
-	LatLong      string
-	PhoneNumber  string
+	Id           int     `json:"id"`
+	Name         string  `json:"name"`
+	AddressLine1 string  `json:"addressLine1"`
+	AddressLine2 string  `json:"addressLine2"`
+	PostCode     string  `json:"postCode"`
+	Lat          float32 `json:"lat"`
+	Long         float32 `json:"long"`
+	PhoneNumber  string  `json:"phoneNumber"`
 }
